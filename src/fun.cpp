@@ -17,7 +17,8 @@ unsigned int faStr1(const char* str) {
                 }
                 hasDigit = false;
             }
-        } else if (static_cast<int>(str[i]) >= 48 && static_cast<int>(str[i]) <= 57) {
+        } else if (static_cast<int>(str[i]) >= 48 &&
+            static_cast<int>(str[i]) <= 57) {
             hasDigit = true;
         } else {
             if (!isCurrentWord) {
@@ -50,15 +51,16 @@ unsigned int faStr2(const char* str) {
             }
         } else if (!correctWord) {
             continue;
-        } else if (static_cast<int>(str[i]) >= 65 && static_cast<int>(str[i]) <= 90) { //for big
+        } else if (static_cast<int>(str[i]) >= 65 &&
+            static_cast<int>(str[i]) <= 90) {
             if (!isCurrentWord) {
                 hasBigLetter = true;
                 isCurrentWord = true;
-            }
-            else {
+            } else {
                 correctWord = false;
             }
-        } else if (static_cast<int>(str[i]) >= 97 && static_cast<int>(str[i]) <= 122) { //for small
+        } else if (static_cast<int>(str[i]) >= 97 &&
+            static_cast<int>(str[i]) <= 122) {
             hasSmallLetter = true;
         } else {
             correctWord = false;
